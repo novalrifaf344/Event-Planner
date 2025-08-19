@@ -1,0 +1,199 @@
+/* ===== Base container ===== */
+.event-planner-container {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111827;              /* dark page background */
+  color: #E5E7EB;                   /* light text */
+}
+
+/* ===== Header ===== */
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.description p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #d1d5db;
+}
+
+/* ===== Buttons ===== */
+.get-started-button,
+.submit-button {
+  background: linear-gradient(135deg, #7C3AED, #5B21B6);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.get-started-button:hover,
+.submit-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* ===== Section “cards” (lighter gray) ===== */
+.features,
+.testimonials,
+.contact,
+.events_categories {
+  margin: 50px auto 0;
+  padding: 48px 24px;
+  border-radius: 16px;
+  background: #374151;             /* lighter gray */
+  border: 1px solid #4B5563;
+  box-shadow: 0 6px 22px rgba(0,0,0,.35);
+  max-width: 1100px;
+}
+
+.features h2,
+.testimonials h2,
+.contact h2 {
+  font-size: 2.2rem;
+  margin: 0 0 20px;
+  color: #7C3AED;                  /* purple section title */
+}
+
+/* ===== Features with stars ===== */
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px 24px;
+  max-width: 900px;
+}
+
+@media (min-width: 700px) {
+  .features ul { grid-template-columns: 1fr 1fr; }
+}
+
+.features ul li {
+  position: relative;
+  padding-left: 28px;
+  text-align: left;
+  color: #F3F4F6;
+}
+
+.features ul li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(1px);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #A78BFA;                  /* light purple star */
+}
+
+/* ===== Testimonials ===== */
+.testimonial {
+  margin-bottom: 16px;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #d7dbe2;
+}
+
+.testimonial .author {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ===== Contact ===== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #A7AFBD;
+  font-size: 1rem;
+  color: #111827;
+  background: #D1D5DB;             /* light gray for all fields */
+}
+
+.contact textarea {
+  height: 160px;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #374151;
+}
+
+/* Centered button */
+.contact form .submit-button {
+  align-self: center;
+  margin-top: 8px;
+  padding: 12px 32px;
+}
+
+/* ===== Events section ===== */
+.events_categories {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.events_categories ul {
+  background: #3F4754;             /* grey card */
+  border: 1px solid #4B5563;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  overflow: hidden;
+  transition: transform .2s ease;
+}
+
+.events_categories ul:hover {
+  transform: translateY(-4px);
+}
+
+.events_categories ul h2 {
+  background: #7C3AED;             /* purple header */
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.events_categories ul li {
+  list-style: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #E5E7EB;
+  border-bottom: 1px solid #4B5563;
+}
+
+.events_categories ul li:last-child {
+  border-bottom: 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 50px;
+  font-size: .95rem;
+  color: #A7AFBD;
+}
